@@ -18,6 +18,13 @@
 		A7901DD02DACED20008320E0 /* CodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DCF2DACED20008320E0 /* CodingTestTests.swift */; };
 		A7901DDA2DACED20008320E0 /* CodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DD92DACED20008320E0 /* CodingTestUITests.swift */; };
 		A7901DDC2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DDB2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift */; };
+		A7E840E82DACF904009FFAC0 /* ClaimListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840E62DACF904009FFAC0 /* ClaimListViewController.swift */; };
+		A7E840E92DACF904009FFAC0 /* ClaimListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E840E72DACF904009FFAC0 /* ClaimListViewController.xib */; };
+		A7E840ED2DACF91E009FFAC0 /* ClaimListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840EB2DACF91E009FFAC0 /* ClaimListTableViewCell.swift */; };
+		A7E840EE2DACF91E009FFAC0 /* ClaimListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E840EC2DACF91E009FFAC0 /* ClaimListTableViewCell.xib */; };
+		A7E840F12DACFB60009FFAC0 /* Claim.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F02DACFB60009FFAC0 /* Claim.swift */; };
+		A7E840F32DACFB6D009FFAC0 /* ClaimListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F22DACFB6D009FFAC0 /* ClaimListViewModel.swift */; };
+		A7E840F52DACFF40009FFAC0 /* ClaimServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F42DACFF40009FFAC0 /* ClaimServiceProtocol.swift */; };
 		D3F3D84AE48481DC86404946 /* Pods_CodingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9713A0654D042CBFA4B3D8 /* Pods_CodingTest.framework */; };
 		D7E11729AE57BE7881BA8C29 /* Pods_CodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E72E1FB88B55011FDB2588 /* Pods_CodingTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +69,13 @@
 		A7901DD52DACED20008320E0 /* CodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7901DD92DACED20008320E0 /* CodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestUITests.swift; sourceTree = "<group>"; };
 		A7901DDB2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7E840E62DACF904009FFAC0 /* ClaimListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListViewController.swift; sourceTree = "<group>"; };
+		A7E840E72DACF904009FFAC0 /* ClaimListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClaimListViewController.xib; sourceTree = "<group>"; };
+		A7E840EB2DACF91E009FFAC0 /* ClaimListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListTableViewCell.swift; sourceTree = "<group>"; };
+		A7E840EC2DACF91E009FFAC0 /* ClaimListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClaimListTableViewCell.xib; sourceTree = "<group>"; };
+		A7E840F02DACFB60009FFAC0 /* Claim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Claim.swift; sourceTree = "<group>"; };
+		A7E840F22DACFB6D009FFAC0 /* ClaimListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListViewModel.swift; sourceTree = "<group>"; };
+		A7E840F42DACFF40009FFAC0 /* ClaimServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimServiceProtocol.swift; sourceTree = "<group>"; };
 		CE3704F5EC230996BD59CC13 /* Pods-CodingTest-CodingTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingTest-CodingTestUITests.release.xcconfig"; path = "Target Support Files/Pods-CodingTest-CodingTestUITests/Pods-CodingTest-CodingTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +184,7 @@
 		A7901DE92DACED6D008320E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840E12DACF8CE009FFAC0 /* ClaimList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +192,7 @@
 		A7901DEA2DACEDFB008320E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840F02DACFB60009FFAC0 /* Claim.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +200,7 @@
 		A7901DEB2DACEE00008320E0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840EF2DACFB2D009FFAC0 /* ClaimList */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,8 +250,36 @@
 		A7901DF12DACEE83008320E0 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840F42DACFF40009FFAC0 /* ClaimServiceProtocol.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		A7E840E12DACF8CE009FFAC0 /* ClaimList */ = {
+			isa = PBXGroup;
+			children = (
+				A7E840EA2DACF909009FFAC0 /* Cell */,
+				A7E840E62DACF904009FFAC0 /* ClaimListViewController.swift */,
+				A7E840E72DACF904009FFAC0 /* ClaimListViewController.xib */,
+			);
+			path = ClaimList;
+			sourceTree = "<group>";
+		};
+		A7E840EA2DACF909009FFAC0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A7E840EB2DACF91E009FFAC0 /* ClaimListTableViewCell.swift */,
+				A7E840EC2DACF91E009FFAC0 /* ClaimListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A7E840EF2DACFB2D009FFAC0 /* ClaimList */ = {
+			isa = PBXGroup;
+			children = (
+				A7E840F22DACFB6D009FFAC0 /* ClaimListViewModel.swift */,
+			);
+			path = ClaimList;
 			sourceTree = "<group>";
 		};
 		D0D605E38D6DE6EC7454FBE5 /* Pods */ = {
@@ -247,7 +292,6 @@
 				11155F6F655CF03B38B155D5 /* Pods-CodingTestTests.debug.xcconfig */,
 				85FDA08E81290983F8C75F12 /* Pods-CodingTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -361,6 +405,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7901DC52DACED20008320E0 /* LaunchScreen.storyboard in Resources */,
+				A7E840EE2DACF91E009FFAC0 /* ClaimListTableViewCell.xib in Resources */,
+				A7E840E92DACF904009FFAC0 /* ClaimListViewController.xib in Resources */,
 				A7901DC22DACED20008320E0 /* Assets.xcassets in Resources */,
 				A7901DBD2DACED1D008320E0 /* Main.storyboard in Resources */,
 			);
@@ -490,10 +536,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E840F12DACFB60009FFAC0 /* Claim.swift in Sources */,
+				A7E840F32DACFB6D009FFAC0 /* ClaimListViewModel.swift in Sources */,
 				A7901DBA2DACED1D008320E0 /* ViewController.swift in Sources */,
 				A7901DB62DACED1D008320E0 /* AppDelegate.swift in Sources */,
+				A7E840F52DACFF40009FFAC0 /* ClaimServiceProtocol.swift in Sources */,
 				A7901DB82DACED1D008320E0 /* SceneDelegate.swift in Sources */,
 				A7901DC02DACED1D008320E0 /* CodingTest.xcdatamodeld in Sources */,
+				A7E840ED2DACF91E009FFAC0 /* ClaimListTableViewCell.swift in Sources */,
+				A7E840E82DACF904009FFAC0 /* ClaimListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodingTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -706,6 +758,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodingTest/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -735,6 +788,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -756,6 +810,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M843HJCGXQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
