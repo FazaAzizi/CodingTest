@@ -27,6 +27,9 @@
 		A7E840F52DACFF40009FFAC0 /* ClaimServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F42DACFF40009FFAC0 /* ClaimServiceProtocol.swift */; };
 		A7E840F72DAD0510009FFAC0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F62DAD050F009FFAC0 /* NetworkManager.swift */; };
 		A7E840F92DAD0ECD009FFAC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840F82DAD0ECD009FFAC0 /* Constants.swift */; };
+		A7E840FE2DAD0F57009FFAC0 /* ClaimDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840FC2DAD0F57009FFAC0 /* ClaimDetailViewController.swift */; };
+		A7E840FF2DAD0F57009FFAC0 /* ClaimDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E840FD2DAD0F57009FFAC0 /* ClaimDetailViewController.xib */; };
+		A7E841012DAD113A009FFAC0 /* ClaimDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E841002DAD113A009FFAC0 /* ClaimDetailViewModel.swift */; };
 		D3F3D84AE48481DC86404946 /* Pods_CodingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9713A0654D042CBFA4B3D8 /* Pods_CodingTest.framework */; };
 		D7E11729AE57BE7881BA8C29 /* Pods_CodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E72E1FB88B55011FDB2588 /* Pods_CodingTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +83,9 @@
 		A7E840F42DACFF40009FFAC0 /* ClaimServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimServiceProtocol.swift; sourceTree = "<group>"; };
 		A7E840F62DAD050F009FFAC0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A7E840F82DAD0ECD009FFAC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A7E840FC2DAD0F57009FFAC0 /* ClaimDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimDetailViewController.swift; sourceTree = "<group>"; };
+		A7E840FD2DAD0F57009FFAC0 /* ClaimDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClaimDetailViewController.xib; sourceTree = "<group>"; };
+		A7E841002DAD113A009FFAC0 /* ClaimDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimDetailViewModel.swift; sourceTree = "<group>"; };
 		CE3704F5EC230996BD59CC13 /* Pods-CodingTest-CodingTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodingTest-CodingTestUITests.release.xcconfig"; path = "Target Support Files/Pods-CodingTest-CodingTestUITests/Pods-CodingTest-CodingTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +194,7 @@
 		A7901DE92DACED6D008320E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840FB2DAD0F44009FFAC0 /* ClaimDetail */,
 				A7E840E12DACF8CE009FFAC0 /* ClaimList */,
 			);
 			path = Views;
@@ -204,6 +211,7 @@
 		A7901DEB2DACEE00008320E0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A7E840FA2DAD0F32009FFAC0 /* ClaimDetail */,
 				A7E840EF2DACFB2D009FFAC0 /* ClaimList */,
 			);
 			path = ViewModels;
@@ -286,6 +294,23 @@
 				A7E840F22DACFB6D009FFAC0 /* ClaimListViewModel.swift */,
 			);
 			path = ClaimList;
+			sourceTree = "<group>";
+		};
+		A7E840FA2DAD0F32009FFAC0 /* ClaimDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7E841002DAD113A009FFAC0 /* ClaimDetailViewModel.swift */,
+			);
+			path = ClaimDetail;
+			sourceTree = "<group>";
+		};
+		A7E840FB2DAD0F44009FFAC0 /* ClaimDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A7E840FC2DAD0F57009FFAC0 /* ClaimDetailViewController.swift */,
+				A7E840FD2DAD0F57009FFAC0 /* ClaimDetailViewController.xib */,
+			);
+			path = ClaimDetail;
 			sourceTree = "<group>";
 		};
 		D0D605E38D6DE6EC7454FBE5 /* Pods */ = {
@@ -414,6 +439,7 @@
 				A7E840EE2DACF91E009FFAC0 /* ClaimListTableViewCell.xib in Resources */,
 				A7E840E92DACF904009FFAC0 /* ClaimListViewController.xib in Resources */,
 				A7901DC22DACED20008320E0 /* Assets.xcassets in Resources */,
+				A7E840FF2DAD0F57009FFAC0 /* ClaimDetailViewController.xib in Resources */,
 				A7901DBD2DACED1D008320E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,9 +571,11 @@
 				A7E840F12DACFB60009FFAC0 /* Claim.swift in Sources */,
 				A7E840F92DAD0ECD009FFAC0 /* Constants.swift in Sources */,
 				A7E840F32DACFB6D009FFAC0 /* ClaimListViewModel.swift in Sources */,
+				A7E841012DAD113A009FFAC0 /* ClaimDetailViewModel.swift in Sources */,
 				A7E840F72DAD0510009FFAC0 /* NetworkManager.swift in Sources */,
 				A7901DBA2DACED1D008320E0 /* ViewController.swift in Sources */,
 				A7901DB62DACED1D008320E0 /* AppDelegate.swift in Sources */,
+				A7E840FE2DAD0F57009FFAC0 /* ClaimDetailViewController.swift in Sources */,
 				A7E840F52DACFF40009FFAC0 /* ClaimServiceProtocol.swift in Sources */,
 				A7901DB82DACED1D008320E0 /* SceneDelegate.swift in Sources */,
 				A7901DC02DACED1D008320E0 /* CodingTest.xcdatamodeld in Sources */,

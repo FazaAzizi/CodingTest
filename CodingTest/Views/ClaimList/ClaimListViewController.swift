@@ -26,7 +26,7 @@ class ClaimListViewController: UIViewController {
     }
     
     private func setupUI() {
-        title = "Insurance Claims"
+        title = "Claim List"
         
         searchBar.delegate = self
         searchBar.placeholder = "Search claims"
@@ -84,7 +84,9 @@ class ClaimListViewController: UIViewController {
     }
     
     private func navigateToClaimDetail(claim: Claim) {
-
+        let detailVC = ClaimDetailViewController()
+        detailVC.configure(with: claim)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
