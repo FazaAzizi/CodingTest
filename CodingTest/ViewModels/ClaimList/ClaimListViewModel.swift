@@ -21,7 +21,7 @@ class ClaimListViewModel {
     init(claimService: ClaimServiceProtocol = ClaimService()) {
         self.claimService = claimService
         setupBindings()
-        loadDummyClaims()
+        loadClaims()
     }
     
     private func setupBindings() {
@@ -43,32 +43,19 @@ class ClaimListViewModel {
         if isLoading { return }
         
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            guard let self = self else { return }
-            
-            self.allClaims = self.createDummyClaims(count: 20)
-            self.isLoading = false
-        }
-    }
-    
-    private func loadDummyClaims() {
-        allClaims = createDummyClaims(count: 20)
-    }
-    
-    private func createDummyClaims(count: Int) -> [Claim] {
-        var claims: [Claim] = []
+        error = nil
         
-        for i in 1...count {
-            let claim = Claim(
-                userId: 100 + (i % 10),
-                id: i,
-                title: "Insurance Claim \(i)",
-                body: "This is a detailed description for insurance claim \(i). It contains information about the incident, damages, and other relevant details for processing the claim."
-            )
-            claims.append(claim)
-        }
-        
-        return claims
+        claimService.getClaims()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                self?.isLoading = false
+                
+                if case .failure(let error) = completion {
+                    self?.error = error
+                }
+            } receiveValue: { [weak self] claims in
+                self?.allClaims = claims
+            }
+            .store(in: &cancellables)
     }
 }
-

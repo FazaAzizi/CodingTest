@@ -13,8 +13,10 @@ protocol ClaimServiceProtocol {
 }
 
 class ClaimService: ClaimServiceProtocol {
+    private let networkManager = NetworkManager.shared
+    
     func getClaims() -> AnyPublisher<[Claim], Error> {
-        return Fail(error: NSError(domain: "Not implemented", code: 0, userInfo: nil))
-            .eraseToAnyPublisher()
+        let url = "\(Constants.baseURL)/posts"
+        return networkManager.request(url)
     }
 }
