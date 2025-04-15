@@ -18,6 +18,8 @@
 		A7901DD02DACED20008320E0 /* CodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DCF2DACED20008320E0 /* CodingTestTests.swift */; };
 		A7901DDA2DACED20008320E0 /* CodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DD92DACED20008320E0 /* CodingTestUITests.swift */; };
 		A7901DDC2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7901DDB2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift */; };
+		A7A663012DAE435200D01487 /* ClaimServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A663002DAE435200D01487 /* ClaimServiceTests.swift */; };
+		A7A663042DAE43CE00D01487 /* ClaimListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A663032DAE43CE00D01487 /* ClaimListViewModelTests.swift */; };
 		A7E840E82DACF904009FFAC0 /* ClaimListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840E62DACF904009FFAC0 /* ClaimListViewController.swift */; };
 		A7E840E92DACF904009FFAC0 /* ClaimListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E840E72DACF904009FFAC0 /* ClaimListViewController.xib */; };
 		A7E840ED2DACF91E009FFAC0 /* ClaimListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E840EB2DACF91E009FFAC0 /* ClaimListTableViewCell.swift */; };
@@ -74,6 +76,8 @@
 		A7901DD52DACED20008320E0 /* CodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7901DD92DACED20008320E0 /* CodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestUITests.swift; sourceTree = "<group>"; };
 		A7901DDB2DACED20008320E0 /* CodingTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7A663002DAE435200D01487 /* ClaimServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimServiceTests.swift; sourceTree = "<group>"; };
+		A7A663032DAE43CE00D01487 /* ClaimListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListViewModelTests.swift; sourceTree = "<group>"; };
 		A7E840E62DACF904009FFAC0 /* ClaimListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListViewController.swift; sourceTree = "<group>"; };
 		A7E840E72DACF904009FFAC0 /* ClaimListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClaimListViewController.xib; sourceTree = "<group>"; };
 		A7E840EB2DACF91E009FFAC0 /* ClaimListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimListTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				A7901DCF2DACED20008320E0 /* CodingTestTests.swift */,
+				A7A663002DAE435200D01487 /* ClaimServiceTests.swift */,
+				A7A663032DAE43CE00D01487 /* ClaimListViewModelTests.swift */,
 			);
 			path = CodingTestTests;
 			sourceTree = "<group>";
@@ -588,6 +594,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A663042DAE43CE00D01487 /* ClaimListViewModelTests.swift in Sources */,
+				A7A663012DAE435200D01487 /* ClaimServiceTests.swift in Sources */,
 				A7901DD02DACED20008320E0 /* CodingTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
