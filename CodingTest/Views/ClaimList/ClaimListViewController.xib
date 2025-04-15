@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClaimListViewController" customModule="CodingTest" customModuleProvider="target">
             <connections>
+                <outlet property="emptyLabel" destination="s3Q-Ys-94v" id="GVZ-Fz-gpU"/>
                 <outlet property="searchBar" destination="WpL-O6-pyA" id="Uvg-kL-6HN"/>
                 <outlet property="tableView" destination="I2C-BP-K7Q" id="lJF-5w-hHd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,16 +32,25 @@
                     <rect key="frame" x="0.0" y="115" width="393" height="703"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3Q-Ys-94v">
+                    <rect key="frame" x="20" y="155" width="353" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s3Q-Ys-94v" secondAttribute="trailing" constant="20" id="0Sk-cx-Fce"/>
                 <constraint firstItem="I2C-BP-K7Q" firstAttribute="top" secondItem="WpL-O6-pyA" secondAttribute="bottom" id="4SU-K0-eDm"/>
+                <constraint firstItem="s3Q-Ys-94v" firstAttribute="top" secondItem="WpL-O6-pyA" secondAttribute="bottom" constant="40" id="7eM-fz-20w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="I2C-BP-K7Q" secondAttribute="trailing" id="HRa-t7-uhQ"/>
                 <constraint firstItem="WpL-O6-pyA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QWA-V7-AcZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="I2C-BP-K7Q" secondAttribute="bottom" id="Xvx-98-fT4"/>
                 <constraint firstItem="WpL-O6-pyA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gG8-JH-Cwv"/>
                 <constraint firstItem="I2C-BP-K7Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i7u-Dl-CHz"/>
+                <constraint firstItem="s3Q-Ys-94v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lw6-tK-mb9"/>
                 <constraint firstItem="WpL-O6-pyA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="nyK-sL-Pqa"/>
             </constraints>
             <point key="canvasLocation" x="-7" y="20"/>

@@ -12,6 +12,7 @@ class ClaimListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     
     private let viewModel = ClaimListViewModel()
     private var cancellables = Set<AnyCancellable>()
@@ -37,6 +38,10 @@ class ClaimListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 120
         
+        emptyLabel.text = "No claims found"
+        emptyLabel.textAlignment = .center
+        emptyLabel.isHidden = true
+        
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
@@ -48,8 +53,9 @@ class ClaimListViewController: UIViewController {
     private func setupBindings() {
         viewModel.$filteredClaims
             .receive(on: RunLoop.main)
-            .sink { [weak self] _ in
+            .sink { [weak self] claims in
                 self?.tableView.reloadData()
+                self?.updateEmptyLabelVisibility(claims: claims)
             }
             .store(in: &cancellables)
         
@@ -58,8 +64,12 @@ class ClaimListViewController: UIViewController {
             .sink { [weak self] isLoading in
                 if isLoading {
                     self?.activityIndicator.startAnimating()
+                    self?.emptyLabel.isHidden = true
                 } else {
                     self?.activityIndicator.stopAnimating()
+                    if let claims = self?.viewModel.filteredClaims {
+                         self?.updateEmptyLabelVisibility(claims: claims)
+                     }
                 }
             }
             .store(in: &cancellables)
@@ -71,6 +81,27 @@ class ClaimListViewController: UIViewController {
                 self?.showErrorAlert(message: error.localizedDescription)
             }
             .store(in: &cancellables)
+        
+        viewModel.$searchText
+            .receive(on: RunLoop.main)
+            .sink { [weak self] searchText in
+                if !searchText.isEmpty {
+                    self?.emptyLabel.text = "No results found for '\(searchText)'"
+                } else {
+                    self?.emptyLabel.text = "No claims found"
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func updateEmptyLabelVisibility(claims: [Claim]) {
+        if claims.isEmpty {
+            emptyLabel.isHidden = false
+            tableView.isHidden = true
+        } else {
+            emptyLabel.isHidden = true
+            tableView.isHidden = false
+        }
     }
     
     private func showErrorAlert(message: String) {
